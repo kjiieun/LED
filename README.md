@@ -5,7 +5,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(16, GPIO.OUT)
 
-my_pym = GPIO, PWM(16, 300)
+my_pwm = GPIO.PWM(16, 300)
 my_pwm.start(100)
 
 try:
