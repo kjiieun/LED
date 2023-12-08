@@ -10,14 +10,16 @@ my_pwm.start(100)
 
 try:
 while True:
-dutycycle == '0':
+dutycycle = input("Enter duty cycle (0 to QUIT): ")
+
+if dutycycle == '0':
 break
 
-my,pwm.ChangeDutyCycle(int(dutycycle))
+my_pwm.ChangeDutyCycle(int(dutycycle))
 time.sleep(0.03)
 
 except KeyboardInterrupt:
 pass
 
-my_pwm.(stop)
+my_pwm.stop()
 GPIO.cleanup()
